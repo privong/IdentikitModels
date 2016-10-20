@@ -1,0 +1,57 @@
+# Idk19Xrun
+# Makefile to run 1:8 mass ratio Identikit models.
+# George Privon, gcp8y@virginia.edu, 09 July 2013
+
+run190: r190/i190.dat
+	treecode in=r190/i190.dat out=r190/r190_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r190/r190a.log save=r190/r190a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run191: r191/i191.dat
+	treecode in=r191/i191.dat out=r191/r191_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r191/r191a.log save=r191/r191a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run192: r192/i192.dat
+	treecode in=r192/i192.dat out=r192/r192_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r192/r192a.log save=r192/r192a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run193: r193/i193.dat
+	treecode in=r193/i193.dat out=r193/r193_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r193/r193a.log save=r193/r193a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run194: r194/i194.dat
+	treecode in=r194/i194.dat out=r194/r194_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r194/r194a.log save=r194/r194a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run195: r195/i195.dat
+	treecode in=r195/i195.dat out=r195/r195_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r195/r195a.log save=r195/r195a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run196: r196/i196.dat
+	treecode in=r196/i196.dat out=r196/r196_%04x.dat \
+	  dtime=1/1024 tstop=48 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r196/r196a.log save=r196/r196a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run197: r197/i197.dat
+	treecode in=r197/i197.dat out=r197/r197_%04x.dat \
+	  dtime=1/1024 tstop=48 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r197/r197a.log save=r197/r197a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run198: r198/i198.dat
+	treecode in=r198/i198.dat out=r198/r198_%04x.dat \
+	  dtime=1/1024 tstop=48 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r198/r198a.log save=r198/r198a_state%1d.dat outputs="Position,Velocity,Potential" 

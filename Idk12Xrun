@@ -1,0 +1,45 @@
+# ~/coll/idkit2/export/Runs: run identakit models.
+
+########################################################################
+
+run121: r121/i121.dat
+	treecode in=r121/i121.dat out=r121/r121_%04x.dat \
+	         dtime=1/256 eps=0.0075 usequad=t dtout=1/32 tstop=10 \
+	         save=r121/r121.state%01d > r121/r121.log
+
+run122: r122/i122.dat
+	treecode in=r122/i122.dat out=r122/r122_%04x.dat \
+	         dtime=1/256 eps=0.0075 usequad=t dtout=1/32 tstop=10 \
+	         save=r122/r122.state%01d > r122/r122.log
+
+run123: r123/i123.dat
+	treecode in=r123/i123.dat out=r123/r123_%04x.dat \
+	         dtime=1/256 eps=0.0075 usequad=t dtout=1/32 tstop=10 \
+	         save=r123/r123.state%01d > r123/r123.log
+
+run124: r124/i124.dat
+	treecode in=r124/i124.dat out=r124/r124_%04x.dat \
+	         dtime=1/256 eps=0.0075 usequad=t dtout=1/32 tstop=10 \
+	         save=r124/r124.state%01d > r124/r124.log
+
+run125: r125/i125.dat
+	treecode in=r125/i125.dat out=r125/r125_%04x.dat \
+	         dtime=1/256 eps=0.0075 usequad=t dtout=1/32 tstop=10 \
+	         save=r125/r125.state%01d > r125/r125.log
+
+run126: r126/i126.dat
+	treecode in=r126/i126.dat out=r126/r126_%04x.dat \
+	         dtime=1/256 eps=0.0075 usequad=t dtout=1/32 tstop=10 \
+	         save=r126/r126.state%01d > r126/r126.log
+
+run127: r127/i127.dat
+	treecode in=r127/i127.dat out=r127/r127_%04x.dat \
+	         dtime=1/256 eps=0.0075 usequad=t dtout=1/32 tstop=10 \
+	         save=r127/r127.state%01d > r127/r127.log
+
+run128: r128/i128.dat
+	treecode in=r128/i128.dat out=r128/r128_%04x.dat \
+	         dtime=1/256 eps=0.0075 usequad=t dtout=1/32 tstop=10 \
+	         save=r128/r128.state%01d > r128/r128.log
+
+########################################################################
