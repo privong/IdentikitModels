@@ -4,7 +4,7 @@ A library of hybrid N-body + test particle simulations for dynamical modeling of
 These are intended for use within the [Identikit](http://www.ifa.hawaii.edu/faculty/barnes/research/identikit/index.html) environment.
 
 This repository consists of bulge+disk+NFW halo galaxy models to facilitate exploration of encounters with various mass ratios.
-The "full mass" and "half mass" models are the same as those provided by [Barnes & Hibbard (2009)](http://adsabs.harvard.edu/abs/2009AJ....137.3071B) and the makefiles are adapted from those provided with Identikit.
+The "full mass" and "half mass" models are the same as those provided by [Barnes & Hibbard (2009)](http://adsabs.harvard.edu/abs/2009AJ....137.3071B) and the makefiles are essentially identical to those provided with Identikit, but separated into different files.
 
 The "quarter mass" and "eighth mass" models have been created by George Privon.
 These models were computed by further reducing the scale lengths by a factor sqrt(2) for each halving of the mass.
