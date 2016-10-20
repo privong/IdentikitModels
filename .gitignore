@@ -1,0 +1,4 @@
+.*.swp
+
+# ignore actual model files
+r*/*
