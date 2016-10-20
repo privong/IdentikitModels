@@ -1,0 +1,57 @@
+# Idk15Xrun
+# Makefile to run 1:8 mass ratio Identikit models.
+# George Privon 09 July 2013
+
+run150: r150/i150.dat
+	treecode in=r150/i150.dat out=r150/r150_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r150/r150a.log save=r150/r150a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run151: r151/i151.dat
+	treecode in=r151/i151.dat out=r151/r151_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r151/r151a.log save=r151/r151a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run152: r152/i152.dat
+	treecode in=r152/i152.dat out=r152/r152_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r152/r152a.log save=r152/r152a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run153: r153/i153.dat
+	treecode in=r153/i153.dat out=r153/r153_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r153/r153a.log save=r153/r153a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run154: r154/i154.dat
+	treecode in=r154/i154.dat out=r154/r154_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r154/r154a.log save=r154/r154a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run155: r155/i155.dat
+	treecode in=r155/i155.dat out=r155/r155_%04x.dat \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r155/r155a.log save=r155/r155a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run156: r156/i156.dat
+	treecode in=r156/i156.dat out=r156/r156_%04x.dat \
+	  dtime=1/1024 tstop=48 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r156/r156a.log save=r156/r156a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run157: r157/i157.dat
+	treecode in=r157/i157.dat out=r157/r157_%04x.dat \
+	  dtime=1/1024 tstop=48 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r157/r157a.log save=r157/r157a_state%1d.dat outputs="Position,Velocity,Potential" 
+
+run158: r158/i158.dat
+	treecode in=r158/i158.dat out=r158/r158_%04x.dat \
+	  dtime=1/1024 tstop=48 dtout=1/16 \
+	  eps=0.00375 usequad=TRUE theta=0.8 \
+	  log=r158/r158a.log save=r158/r158a_state%1d.dat outputs="Position,Velocity,Potential" 
