@@ -1,0 +1,183 @@
+# Idk17X
+# 1:6 mass ratio Identikit models.
+# George Privon 20 October 2016
+
+SEED = 12345
+TESTBODY = 0x40  # test particle type
+MASSBODY = 0x41  # massive particle type
+HALOBODY = 0x42  # halo particle type
+SPHRBODY = 0x43  # spheroid particle type
+DISKBODY = 0x44  # disk particle type
+DISKGAS  = 0x64  # disk particle type
+
+# Jhat file creation. Create r171/i171.dat before running this.
+# This jhat file can be used for all encounters as they have the same SEED
+jhat17X.dat: r171/i171_1.dat r171/i171_2.dat
+	cat r171/i171_[12].dat | csf - - exclude=History | \
+	  snapcons - - | \
+	    snapset - out=jhat19X.dat passall=False \
+		require=Position,Velocity,Mass produce=AuxVec,Aux \
+		auxvx="m==0 ? jx/jtot : 0" \
+		auxvy="m==0 ? jy/jtot : 0" \
+		auxvz="m==0 ? jz/jtot : 0" \
+		aux="8.0 / MAX(1.0, rsqr((i<344064?12:29.394) * r))"
+
+r170/i170.dat:
+	$(MAKE) -f Idk17X bdhidkt_01b \
+		NMASS=81920 NTEST=262144 ID=170 SEED=0x123451 X=_1
+	$(MAKE) -f Idk17X bdhidkt_06b \
+		NMASS=40960 NTEST=65536 ID=170 SEED=0x123452 X=_2
+	kepsnap out=r170/orbit.dat mass1=1.25 mass2=0.20833 eccent=1 \
+	        r_peri=0.0 t_peri=2.0 nsteps=65536 thetaz=0
+	(cat r170/i170_1.dat; \
+	 cat r170/i170_2.dat) | \
+	   snapcons - r170/i170.dat frame=r170/orbit.dat \
+	            produce=Mass,Position,Velocity,BodyType
+
+r171/i171.dat:
+	$(MAKE) -f Idk17X bdhidkt_01b \
+		NMASS=81920 NTEST=262144 ID=171 SEED=0x123451 X=_1
+	$(MAKE) -f Idk17X bdhidkt_06b \
+		NMASS=40960 NTEST=65536 ID=171 SEED=0x123452 X=_2
+	kepsnap out=r171/orbit.dat mass1=1.25 mass2=0.20833 eccent=1 \
+	        r_peri=0.0625 t_peri=2.0 nsteps=65536 thetaz=0
+	(cat r171/i171_1.dat; \
+	 cat r171/i171_2.dat) | \
+	   snapcons - r171/i171.dat frame=r171/orbit.dat \
+	            produce=Mass,Position,Velocity,BodyType
+
+
+r172/i172.dat:
+	$(MAKE) -f Idk17X bdhidkt_01b \
+		NMASS=81920 NTEST=262144 ID=172 SEED=0x123451 X=_1
+	$(MAKE) -f Idk17X bdhidkt_06b \
+		NMASS=40960 NTEST=65536 ID=172 SEED=0x123452 X=_2
+	kepsnap out=r172/orbit.dat mass1=1.25 mass2=0.20833 eccent=1 \
+	        r_peri=.125 t_peri=2.0 nsteps=65536 thetaz=0
+	(cat r172/i172_1.dat; \
+	 cat r172/i172_2.dat) | \
+	   snapcons - r172/i172.dat frame=r172/orbit.dat \
+	            produce=Mass,Position,Velocity,BodyType
+
+
+r173/i173.dat:
+	$(MAKE) -f Idk17X bdhidkt_01b \
+		NMASS=81920 NTEST=262144 ID=173 SEED=0x123451 X=_1
+	$(MAKE) -f Idk17X bdhidkt_06b \
+		NMASS=40960 NTEST=65536 ID=173 SEED=0x123452 X=_2
+	kepsnap out=r173/orbit.dat mass1=1.25 mass2=0.20833 eccent=1 \
+	        r_peri=.1875 t_peri=2.0 nsteps=65536 thetaz=0
+	(cat r173/i173_1.dat; \
+	 cat r173/i173_2.dat) | \
+	   snapcons - r173/i173.dat frame=r173/orbit.dat \
+	            produce=Mass,Position,Velocity,BodyType
+
+
+r174/i174.dat:
+	$(MAKE) -f Idk17X bdhidkt_01b \
+		NMASS=81920 NTEST=262144 ID=174 SEED=0x123451 X=_1
+	$(MAKE) -f Idk17X bdhidkt_06b \
+		NMASS=40960 NTEST=65536 ID=174 SEED=0x123452 X=_2
+	kepsnap out=r174/orbit.dat mass1=1.25 mass2=0.20833 eccent=1 \
+	        r_peri=0.25 t_peri=2.0 nsteps=65536 thetaz=0
+	(cat r174/i174_1.dat; \
+	 cat r174/i174_2.dat) | \
+	   snapcons - r174/i174.dat frame=r174/orbit.dat \
+	            produce=Mass,Position,Velocity,BodyType
+
+
+r175/i175.dat:
+	$(MAKE) -f Idk17X bdhidkt_01b \
+		NMASS=81920 NTEST=262144 ID=175 SEED=0x123451 X=_1
+	$(MAKE) -f Idk17X bdhidkt_06b \
+		NMASS=40960 NTEST=65536 ID=175 SEED=0x123452 X=_2
+	kepsnap out=r175/orbit.dat mass1=1.25 mass2=0.20833 eccent=1 \
+	        r_peri=.3125 t_peri=2.0 nsteps=65536 thetaz=0
+	(cat r175/i175_1.dat; \
+	 cat r175/i175_2.dat) | \
+	   snapcons - r175/i175.dat frame=r175/orbit.dat \
+	            produce=Mass,Position,Velocity,BodyType
+
+
+r176/i176.dat:
+	$(MAKE) -f Idk17X bdhidkt_01b \
+		NMASS=81920 NTEST=262144 ID=176 SEED=0x123451 X=_1
+	$(MAKE) -f Idk17X bdhidkt_06b \
+		NMASS=40960 NTEST=65536 ID=176 SEED=0x123452 X=_2
+	kepsnap out=r176/orbit.dat mass1=1.25 mass2=0.20833 eccent=1 \
+	        r_peri=.375 t_peri=2.0 nsteps=65536 thetaz=0
+	(cat r176/i176_1.dat; \
+	 cat r176/i176_2.dat) | \
+	   snapcons - r176/i176.dat frame=r176/orbit.dat \
+	            produce=Mass,Position,Velocity,BodyType
+
+
+r177/i177.dat:
+	$(MAKE) -f Idk17X bdhidkt_01b \
+		NMASS=81920 NTEST=262144 ID=177 SEED=0x123451 X=_1
+	$(MAKE) -f Idk17X bdhidkt_06b \
+		NMASS=40960 NTEST=65536 ID=177 SEED=0x123452 X=_2
+	kepsnap out=r177/orbit.dat mass1=1.25 mass2=0.20833 eccent=1 \
+	        r_peri=0.4375 t_peri=2.0 nsteps=65536 thetaz=0
+	(cat r177/i177_1.dat; \
+	 cat r177/i177_2.dat) | \
+	   snapcons - r177/i177.dat frame=r177/orbit.dat \
+	            produce=Mass,Position,Velocity,BodyType
+
+
+r178/i178.dat:
+	$(MAKE) -f Idk17X bdhidkt_01b \
+		NMASS=81920 NTEST=262144 ID=178 SEED=0x123451 X=_1
+	$(MAKE) -f Idk17X bdhidkt_06b \
+		NMASS=40960 NTEST=65536 ID=178 SEED=0x123452 X=_2
+	kepsnap out=r178/orbit.dat mass1=1.25 mass2=0.20833 eccent=1 \
+	        r_peri=0.5 t_peri=2.0 nsteps=65536 thetaz=0
+	(cat r178/i198_1.dat; \
+	 cat r178/i198_2.dat) | \
+	   snapcons - r178/i198.dat frame=r198/orbit.dat \
+	            produce=Mass,Position,Velocity,BodyType
+
+
+# full-mass identikit model
+bdhidkt_01b: halo_c039_a25_e00375.txt bulge_g1_a02_b4_e00375.txt
+	@printf "# GSL_RNG_TYPE = %s\n" `printenv GSL_RNG_TYPE`
+	tablegsp in=halo_c039_a25_e00375.txt out=r$(ID)/halo$X.dat smooth=f mtot=1
+	tablegsp in=halo_c039_a25_e00375.txt out=r$(ID)/halo$X_s.dat smooth=t mtot=1
+	tablegsp in=bulge_g1_a02_b4_e00375.txt out=r$(ID)/bulge$X.dat smooth=f mtot=0.0625
+	tablegsp in=bulge_g1_a02_b4_e00375.txt out=r$(ID)/bulge$X_s.dat smooth=t mtot=0.0625
+	expdgsp out=r$(ID)/disk$X.dat mtot=0.1875 alpha=12 zdisk=0.0125
+	expdgsp out=- mtot=0.1875 alpha=12 | \
+	  gspsmooth in=- out=r$(ID)/disk$X_s.dat eps=0.014504 kappa=2.228273
+	gspadd in=r$(ID)/halo$X.dat,r$(ID)/disk$X.dat,r$(ID)/bulge$X.dat out=r$(ID)/mass$X.dat
+	gspadd in=r$(ID)/halo$X_s.dat,r$(ID)/disk$X_s.dat,r$(ID)/bulge$X_s.dat out=- | \
+	  gsprealize gsp=r$(ID)/mass$X.dat grav=- out=r$(ID)/i$(ID)$X_m.dat \
+	             nbody=$(NMASS) seed=$(SEED)1
+	gspadd in=r$(ID)/halo$X_s.dat,r$(ID)/disk$X_s.dat,r$(ID)/bulge$X_s.dat out=- | \
+	  gsptestdisk gsp=- out=r$(ID)/i$(ID)$X_t.dat alpha=12 rcut=17.5/12 \
+	              ndisk=$(NTEST) model=2 randspin=t seed=$(SEED)2
+	(snapset in=r$(ID)/i$(ID)$X_m.dat out=- produce=AuxVec,BodyType \
+	         auxvx=0 auxvy=0 auxvz=0 type=$(MASSBODY); \
+	 snapset in=r$(ID)/i$(ID)$X_t.dat out=- produce=Mass,BodyType m=0 type=$(TESTBODY)) | \
+	  snapcons - r$(ID)/i$(ID)$X.dat produce=Position,Velocity,Mass,AuxVec,BodyType
+
+# 1/6 mass identikit model
+bdhidkt_06b: halo_c039_a1021_e00375.txt bulge_g1_a00816_b164_e00375.txt
+	@printf "# GSL_RNG_TYPE = %s\n" `printenv GSL_RNG_TYPE`
+	tablegsp in=halo_c039_a1021_e00375.txt out=r$(ID)/halo$X.dat smooth=f mtot=0.1666667
+	tablegsp in=halo_c039_a1021_e00375.txt out=r$(ID)/halo$X_s.dat smooth=t mtot=0.166667
+	tablegsp in=bulge_g1_a00816_b164_e00375.txt out=r$(ID)/bulge$X.dat smooth=f mtot=0.0104167
+	tablegsp in=bulge_g1_a00816_b164_e00375.txt out=r$(ID)/bulge$X_s.dat smooth=t mtot=0.0104167
+	expdgsp out=r$(ID)/disk$X.dat mtot=0.03125 alpha=29.394 zdisk=0.005103
+	expdgsp out=- mtot=0.03125 alpha=29.394 | \
+	  gspsmooth in=- out=r$(ID)/disk$X_s.dat eps=0.007815 kappa=2.052168
+	gspadd in=r$(ID)/halo$X.dat,r$(ID)/disk$X.dat,r$(ID)/bulge$X.dat out=r$(ID)/mass$X.dat
+	gspadd in=r$(ID)/halo$X_s.dat,r$(ID)/disk$X_s.dat,r$(ID)/bulge$X_s.dat out=- | \
+	  gsprealize gsp=r$(ID)/mass$X.dat grav=- out=r$(ID)/i$(ID)$X_m.dat \
+	             nbody=$(NMASS) seed=$(SEED)1
+	gspadd in=r$(ID)/halo$X_s.dat,r$(ID)/disk$X_s.dat,r$(ID)/bulge$X_s.dat out=- | \
+	  gsptestdisk gsp=- out=r$(ID)/i$(ID)$X_t.dat alpha=29.392 rcut=17.5/29.394 \
+	              ndisk=$(NTEST) model=2 randspin=t seed=$(SEED)2
+	(snapset in=r$(ID)/i$(ID)$X_m.dat out=- produce=AuxVec,BodyType \
+	         auxvx=0 auxvy=0 auxvz=0 type=$(MASSBODY); \
+	 snapset in=r$(ID)/i$(ID)$X_t.dat out=- produce=Mass,BodyType m=0 type=$(TESTBODY)) | \
+	  snapcons - r$(ID)/i$(ID)$X.dat produce=Position,Velocity,Mass,AuxVec,BodyType
