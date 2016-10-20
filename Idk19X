@@ -1,6 +1,6 @@
 # Idk19X
 # 1:8 mass ratio Identikit models.
-# George Privon, gcp8y@virginia.edu. 09 July 2013
+# George Privon 09 July 2013
 
 SEED = 12345
 TESTBODY = 0x40  # test particle type

@@ -1,6 +1,6 @@
 # Idk19Xrun
 # Makefile to run 1:8 mass ratio Identikit models.
-# George Privon, gcp8y@virginia.edu, 09 July 2013
+# George Privon 09 July 2013
 
 run190: r190/i190.dat
 	treecode in=r190/i190.dat out=r190/r190_%04x.dat \
