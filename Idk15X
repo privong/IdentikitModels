@@ -1,6 +1,6 @@
-# Idk19X
+# Idk15X
 # 1:4 mass ratio Identikit models.
-# George Privon 09 July 2013
+# George Privon 20 October 2016
 
 SEED = 12345
 TESTBODY = 0x40  # test particle type

@@ -1,6 +1,6 @@
 # Idk15Xrun
-# Makefile to run 1:8 mass ratio Identikit models.
-# George Privon 09 July 2013
+# Makefile to run 1:4 mass ratio Identikit models.
+# George Privon 20 October 2016 
 
 run150: r150/i150.dat
 	treecode in=r150/i150.dat out=r150/r150_%04x.dat \
@@ -40,18 +40,18 @@ run155: r155/i155.dat
 
 run156: r156/i156.dat
 	treecode in=r156/i156.dat out=r156/r156_%04x.dat \
-	  dtime=1/1024 tstop=48 dtout=1/16 \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
 	  eps=0.00375 usequad=TRUE theta=0.8 \
 	  log=r156/r156a.log save=r156/r156a_state%1d.dat outputs="Position,Velocity,Potential" 
 
 run157: r157/i157.dat
 	treecode in=r157/i157.dat out=r157/r157_%04x.dat \
-	  dtime=1/1024 tstop=48 dtout=1/16 \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
 	  eps=0.00375 usequad=TRUE theta=0.8 \
 	  log=r157/r157a.log save=r157/r157a_state%1d.dat outputs="Position,Velocity,Potential" 
 
 run158: r158/i158.dat
 	treecode in=r158/i158.dat out=r158/r158_%04x.dat \
-	  dtime=1/1024 tstop=48 dtout=1/16 \
+	  dtime=1/1024 tstop=24 dtout=1/16 \
 	  eps=0.00375 usequad=TRUE theta=0.8 \
 	  log=r158/r158a.log save=r158/r158a_state%1d.dat outputs="Position,Velocity,Potential" 
