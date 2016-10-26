@@ -13,7 +13,7 @@ The initial conditions files given below provide sample encounters for parabolic
 
 ## Software Requirements
 
-Running these simulations requires installation of the [Zeno N-body/SPH simulation environment](http://www.ifa.hawaii.edu/faculty/barnes/zeno/) ([github link](https://github.com/joshuabarnes/zeno)).
+Constructing the initial conditions and running these simulations requires installation of the [Zeno N-body/SPH simulation environment](http://www.ifa.hawaii.edu/faculty/barnes/zeno/) ([github link](https://github.com/joshuabarnes/zeno)).
 
 ## Files
 
@@ -21,12 +21,12 @@ Running these simulations requires installation of the [Zeno N-body/SPH simulati
 
 The initial conditions files and run files follow a naming convention of `IdkZYX` and `IdkZYXrun`, where the numbers replacing ZYX correspond to:
 
-* `Z` = 1 indicating parabolic orbits
-* `Y` indicating the sum of the fractional masses of the interacting galaxies. `2` indicates and equal-mass encounter (`1+1`) while `5` indicates a 1:4 mass ratio (`1+4`).
+* `Z` = 1 indicating parabolic orbits.
+* `Y` indicating the sum of the fractional masses of the interacting galaxies. `2` indicates an equal-mass encounter (`1+1`) while `5` indicates a 1:4 mass ratio (`1+4`).
 * `X` indicates the pericenter separation at first pass, for the idealized Keplerian orbit. This corresponds to multiples of `1/16` simulation units.
 
 Thus, `Idk12X` contains initial conditions for equal mass galaxy encounters on parabolic orbits.
-The file has a range of first pericenter encounters.
+The file has a range of first pericenter encounters (1/16 through 16/16, in simulation units).
 The `Idk12Xrun` file contains routines to evolve the initial conditions for a suitable time range and save the snapshots for comparison with data.
 
 ### Support Files
