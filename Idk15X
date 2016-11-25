@@ -27,7 +27,7 @@ r150/i150.dat:
 		NMASS=81920 NTEST=262144 ID=150 SEED=0x123451 X=_1
 	$(MAKE) -f Idk15X bdhidkt_04b \
 		NMASS=40960 NTEST=131072 ID=150 SEED=0x123452 X=_2
-	kepsnap out=r150/orbit.dat mass1=1.25 mass2=0.15625 eccent=1 \
+	kepsnap out=r150/orbit.dat mass1=1.25 mass2=0.3125 eccent=1 \
 	        r_peri=0.0 t_peri=2.0 nsteps=65536 thetaz=0
 	(cat r150/i150_1.dat; \
 	 cat r150/i150_2.dat) | \
@@ -39,7 +39,7 @@ r151/i151.dat:
 		NMASS=81920 NTEST=262144 ID=151 SEED=0x123451 X=_1
 	$(MAKE) -f Idk15X bdhidkt_04b \
 		NMASS=40960 NTEST=131072 ID=151 SEED=0x123452 X=_2
-	kepsnap out=r151/orbit.dat mass1=1.25 mass2=0.15625 eccent=1 \
+	kepsnap out=r151/orbit.dat mass1=1.25 mass2=0.3125 eccent=1 \
 	        r_peri=0.0625 t_peri=2.0 nsteps=65536 thetaz=0
 	(cat r151/i151_1.dat; \
 	 cat r151/i151_2.dat) | \
@@ -52,7 +52,7 @@ r152/i152.dat:
 		NMASS=81920 NTEST=262144 ID=152 SEED=0x123451 X=_1
 	$(MAKE) -f Idk15X bdhidkt_04b \
 		NMASS=40960 NTEST=131072 ID=152 SEED=0x123452 X=_2
-	kepsnap out=r152/orbit.dat mass1=1.25 mass2=0.15625 eccent=1 \
+	kepsnap out=r152/orbit.dat mass1=1.25 mass2=0.3125 eccent=1 \
 	        r_peri=.125 t_peri=2.0 nsteps=65536 thetaz=0
 	(cat r152/i152_1.dat; \
 	 cat r152/i152_2.dat) | \
@@ -65,7 +65,7 @@ r153/i153.dat:
 		NMASS=81920 NTEST=262144 ID=153 SEED=0x123451 X=_1
 	$(MAKE) -f Idk15X bdhidkt_04b \
 		NMASS=40960 NTEST=131072 ID=153 SEED=0x123452 X=_2
-	kepsnap out=r153/orbit.dat mass1=1.25 mass2=0.15625 eccent=1 \
+	kepsnap out=r153/orbit.dat mass1=1.25 mass2=0.3125 eccent=1 \
 	        r_peri=.1875 t_peri=2.0 nsteps=65536 thetaz=0
 	(cat r153/i153_1.dat; \
 	 cat r153/i153_2.dat) | \
@@ -78,7 +78,7 @@ r154/i154.dat:
 		NMASS=81920 NTEST=262144 ID=154 SEED=0x123451 X=_1
 	$(MAKE) -f Idk15X bdhidkt_04b \
 		NMASS=40960 NTEST=131072 ID=154 SEED=0x123452 X=_2
-	kepsnap out=r154/orbit.dat mass1=1.25 mass2=0.15625 eccent=1 \
+	kepsnap out=r154/orbit.dat mass1=1.25 mass2=0.3125 eccent=1 \
 	        r_peri=0.25 t_peri=2.0 nsteps=65536 thetaz=0
 	(cat r154/i154_1.dat; \
 	 cat r154/i154_2.dat) | \
@@ -91,7 +91,7 @@ r155/i155.dat:
 		NMASS=81920 NTEST=262144 ID=155 SEED=0x123451 X=_1
 	$(MAKE) -f Idk15X bdhidkt_04b \
 		NMASS=40960 NTEST=131072 ID=155 SEED=0x123452 X=_2
-	kepsnap out=r155/orbit.dat mass1=1.25 mass2=0.15625 eccent=1 \
+	kepsnap out=r155/orbit.dat mass1=1.25 mass2=0.3125 eccent=1 \
 	        r_peri=.3125 t_peri=2.0 nsteps=65536 thetaz=0
 	(cat r155/i155_1.dat; \
 	 cat r155/i155_2.dat) | \
@@ -104,7 +104,7 @@ r156/i156.dat:
 		NMASS=81920 NTEST=262144 ID=156 SEED=0x123451 X=_1
 	$(MAKE) -f Idk15X bdhidkt_04b \
 		NMASS=40960 NTEST=131072 ID=156 SEED=0x123452 X=_2
-	kepsnap out=r156/orbit.dat mass1=1.25 mass2=0.15625 eccent=1 \
+	kepsnap out=r156/orbit.dat mass1=1.25 mass2=0.3125 eccent=1 \
 	        r_peri=.375 t_peri=2.0 nsteps=65536 thetaz=0
 	(cat r156/i156_1.dat; \
 	 cat r156/i156_2.dat) | \
@@ -117,7 +117,7 @@ r157/i157.dat:
 		NMASS=81920 NTEST=262144 ID=157 SEED=0x123451 X=_1
 	$(MAKE) -f Idk15X bdhidkt_04b \
 		NMASS=40960 NTEST=131072 ID=157 SEED=0x123452 X=_2
-	kepsnap out=r157/orbit.dat mass1=1.25 mass2=0.15625 eccent=1 \
+	kepsnap out=r157/orbit.dat mass1=1.25 mass2=0.3125 eccent=1 \
 	        r_peri=0.4375 t_peri=2.0 nsteps=65536 thetaz=0
 	(cat r157/i157_1.dat; \
 	 cat r157/i157_2.dat) | \
@@ -130,7 +130,7 @@ r158/i158.dat:
 		NMASS=81920 NTEST=262144 ID=158 SEED=0x123451 X=_1
 	$(MAKE) -f Idk15X bdhidkt_04b \
 		NMASS=40960 NTEST=131072 ID=158 SEED=0x123452 X=_2
-	kepsnap out=r158/orbit.dat mass1=1.25 mass2=0.15625 eccent=1 \
+	kepsnap out=r158/orbit.dat mass1=1.25 mass2=0.3125 eccent=1 \
 	        r_peri=0.5 t_peri=2.0 nsteps=65536 thetaz=0
 	(cat r158/i158_1.dat; \
 	 cat r158/i158_2.dat) | \
