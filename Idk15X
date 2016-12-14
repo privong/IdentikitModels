@@ -163,8 +163,8 @@ bdhidkt_01b: halo_c039_a25_e00375.txt bulge_g1_a02_b4_e00375.txt
 # 1/4 mass identikit model
 bdhidkt_04b: halo_c039_a125_e00375.txt bulge_g1_a01_b4_e00375.txt
 	@printf "# GSL_RNG_TYPE = %s\n" `printenv GSL_RNG_TYPE`
-	tablegsp in=halo_c039_a0884_e00375.txt out=r$(ID)/halo$X.dat smooth=f mtot=0.25
-	tablegsp in=halo_c039_a0884_e00375.txt out=r$(ID)/halo$X_s.dat smooth=t mtot=0.25
+	tablegsp in=halo_c039_a125_e00375.txt out=r$(ID)/halo$X.dat smooth=f mtot=0.25
+	tablegsp in=halo_c039_a125_e00375.txt out=r$(ID)/halo$X_s.dat smooth=t mtot=0.25
 	tablegsp in=bulge_g1_a01_b4_e00375.txt out=r$(ID)/bulge$X.dat smooth=f mtot=0.015625
 	tablegsp in=bulge_g1_a01_b4_e00375.txt out=r$(ID)/bulge$X_s.dat smooth=t mtot=0.015625
 	expdgsp out=r$(ID)/disk$X.dat mtot=0.046875 alpha=24 zdisk=0.00625
